@@ -4,4 +4,4 @@ for i in range(0, 9):
         if i < j and i + j != 17:
             print("{:d}{:d}, ".format(i, j), end="")
 else:
-    print("98")
+    print("89")
