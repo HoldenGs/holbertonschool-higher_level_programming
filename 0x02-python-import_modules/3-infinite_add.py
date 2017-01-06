@@ -8,5 +8,3 @@ if __name__ == "__main__":
             nextnum = int(argv[i])
             sum += nextnum
         print("{:d}".format(sum))
-    else:
-        print("Give me 2 or more numbers!")
