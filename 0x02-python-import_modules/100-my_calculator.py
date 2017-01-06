@@ -6,8 +6,8 @@ if __name__ == "__main__":
         print("./100-my_calculator.py <a> <operator> <b>")
         exit(1)
     a = int(argv[1])
-    b = int(argv[3])
     op = argv[2]
+    b = int(argv[3])
     if op == '+':
         result = add(a, b)
     elif op == '-':
@@ -19,4 +19,4 @@ if __name__ == "__main__":
     else:
         print("Unknown operator. Only: +, -, * and / available")
         exit(1)
-    print("{:d} {:s} {:d} = {:d}".format(a, op, b, result))
+    print("{} {} {} = {}".format(a, op, b, result))
