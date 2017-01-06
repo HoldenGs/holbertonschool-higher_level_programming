@@ -5,17 +5,17 @@ if __name__ == "__main__":
     if len(argv) != 4:
         print("./100-my_calculator.py <a> <operator> <b>")
         exit(1)
-    a = int(argv[1])
+    a = argv[1]
     op = argv[2]
-    b = int(argv[3])
+    b = argv[3]
     if op == '+':
-        result = add(a, b)
+        result = add(int(a), int(b))
     elif op == '-':
-        result = sub(a, b)
+        result = sub(int(a), int(b))
     elif op == '*':
-        result = mul(a, b)
+        result = mul(int(a), int(b))
     elif op == '/':
-        result = div(a, b)
+        result = div(int(a), int(b))
     else:
         print("Unknown operator. Only: +, -, * and / available")
         exit(1)
