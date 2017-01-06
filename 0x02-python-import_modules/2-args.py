@@ -9,4 +9,4 @@ if __name__ == "__main__":
     elif length == 2:
         print("{:d} argument:\n{:d}: {:s}".format(1, 1, argv[1]))
     else:
-        print("0 arguments.")
+        print("0 argument.")
