@@ -5,6 +5,8 @@
 1 function:
 print_square
 """
+
+
 def print_square(size):
     """
     print_square: print a square of hashes of size
