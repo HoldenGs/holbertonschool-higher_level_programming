@@ -1,0 +1,43 @@
+	>>> matrix_divided = __import__("2-matrix_divided").matrix_divided
+	>>> print(__import__("2-matrix_divided").__doc__)
+	<BLANKLINE>
+    	2-matrix_divided
+    	<BLANKLINE>
+    	1 Function:
+    	matrix_divided
+    	<BLANKLINE>
+	>>> print(__import__("2-matrix_divided").matrix_divided.__doc__)
+	<BLANKLINE>
+	    matrix_divided: divided all elements of a matrix
+	    matrix: matrix to divid
+	    div: divisor
+	<BLANKLINE>
+	    exceptions:
+  	    TypeError: non-integer/float values in matrix, rows w/ different sizes
+	    non-integer/float values in div
+	<BLANKLINE>
+	    ZeroDivisionError: div is 0
+	<BLANKLINE>
+	>>> matrix = [[1, 2, 3], [4, 5, 6]]
+	>>> print(matrix_divided(matrix, 3))
+	[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+	>>> print(matrix)
+	[[1, 2, 3], [4, 5, 6]]
+	>>> print(matrix_divided(matrix, 0))
+	Traceback (most recent call last):
+		  ...
+	ZeroDivisionError: division by zero
+	>>> print(matrix_divided(matrix, "Hey Guys!"))
+	Traceback (most recent call last):
+		  ...
+	TypeError: div must be a number
+	>>> matrix = [[1, 2, 3], [1]]
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+		  ...
+	TypeError: Each row of the matrix must have the same size
+	>>> matrix = [[1, 2, 3,], ["Hey", 2, 3]]
+	>>> print(matrix_divided(matrix, 3))
+	Traceback (most recent call last):
+		  ...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
