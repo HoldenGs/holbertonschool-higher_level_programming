@@ -28,3 +28,19 @@
 	Traceback (most recent call last):
 		  ...
 	NameError: name 'H' is not defined
+	>>> 	   mul(1, 2)
+	Traceback (most recent call last):
+		  ...
+	IndentationError: unexpected indent
+	>>> print(mul(foo, 2))
+	Traceback (most recent call last):
+		  ...
+	NameError: name 'foo' is not defined
+	>>> print(mul(, 2))
+	Traceback (most recent call last):
+		  ...
+	SyntaxError: invalid syntax
+	>>> print(mul(2, lambda x: x))
+	Traceback (most recent call last):
+		  ...
+	TypeError: unsupported operand type(s) for *: 'int' and 'function'
