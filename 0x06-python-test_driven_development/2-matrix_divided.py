@@ -5,6 +5,8 @@
 1 Function:
 matrix_divided
 """
+
+
 def matrix_divided(matrix, div):
     """
     matrix_divided: divided all elements of a matrix
@@ -17,16 +19,22 @@ def matrix_divided(matrix, div):
 
     ZeroDivisionError: div is 0
     """
+    typeerror = "matrix must be a matrix (list of lists) of integers/floats"
+    sizeerror = "Each row of the matrix must have the same size"
     try:
+        if matrix == []:
+            raise TypeError()
         len_of_last = len(matrix[0])
         for i in matrix:
+            if i == []:
+                raise TypeError(typeerror)
             if len(i) != len_of_last:
-                raise TypeError("Each row of the matrix must have the same size")
+                raise TypeError(sizeerror)
             else:
                 len_of_last = len(i)
-            for j in i:
-                if isinstance(j, (int, float)) is False:
-                    raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                for j in i:
+                    if isinstance(j, (int, float)) is False:
+                        raise TypeError(typeerror)
         if isinstance(div, (int, float)) is False:
             raise TypeError("div must be a number")
         if div == 0:
