@@ -48,3 +48,5 @@
 	-0.0
 	>>> print(mul(False, True))
 	0
+	>>> print(mul(1 + 2, 2))
+	6
