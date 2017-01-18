@@ -1,0 +1,34 @@
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> print(__import__("0-add_integer").__doc__)
+	<BLANKLINE>
+	0-add_integer
+	<BLANKLINE>
+	1 Function:
+	add_integer
+	<BLANKLINE>
+	>>> print(__import__("0-add_integer").add_integer.__doc__)
+	<BLANKLINE>
+	    add_integer: adds two integers
+	    a: first integer
+	    b: second integer
+	<BLANKLINE>
+	    converts floats to ints; raises exceptions for non-number input
+        <BLANKLINE>
+	>>> print(add_integer(1, 2))
+	3
+	>>> print(add_integer(100, -2))
+	98
+	>>> print(add_integer(100.3, -2))
+	98
+	>>> print(add_integer(4, "School"))
+	Traceback (most recent call last):
+		  ...
+	TypeError: b must be an integer
+	>>> print(add_integer("Holberton", "School"))
+	Traceback (most recent call last):
+		  ...
+	TypeError: a must be an integer
+	>>> print(add_integer(None, 4))
+	Traceback (most ercent call last):
+		  ...
+	TypeError: a must be an integer

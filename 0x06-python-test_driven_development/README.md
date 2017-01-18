@@ -1,0 +1,1 @@
+This project is for learning how to make great tests using doctests.
