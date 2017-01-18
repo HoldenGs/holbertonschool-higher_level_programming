@@ -44,3 +44,7 @@
 	Traceback (most recent call last):
 		  ...
 	TypeError: unsupported operand type(s) for *: 'int' and 'function'
+	>>> print(mul(-1.01, 0))
+	-0.0
+	>>> print(mul(False, True))
+	0
