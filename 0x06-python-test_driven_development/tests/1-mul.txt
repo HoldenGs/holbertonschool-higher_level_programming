@@ -1,0 +1,30 @@
+	>>> mul = __import__('1-mul').mul
+	>>> print(__import__('1-mul').__doc__)
+	<BLANKLINE>
+	This is the "Multiplication" module.
+	<BLANKLINE>
+	The Multiplication module supplies a simple function to multiply 2 Python variables.
+	<BLANKLINE>
+	>>> print(__import__('1-mul').mul.__doc__)
+	Return the multiplication of 2 arguments
+	<BLANKLINE>
+	>>> print(mul(100, 0))
+	0
+	>>> print(mul(20, 5))
+	100
+	>>> print(mul(30.5, 2))
+	61.0
+	>>> print(mul("Holberton", 5))
+	HolbertonHolbertonHolbertonHolbertonHolberton
+	>>> print(mul(None, 61))
+	Traceback (most recent call last):
+		  ...
+	TypeError: unsupported operand type(s) for *: 'NoneType' and 'int'
+	>>> print(mul([5, 6, 7, 8], 2))
+	[5, 6, 7, 8, 5, 6, 7, 8]
+	>>> print(mul(2e300, 2e300))
+	inf
+	>>> print(mul({H: "10", B: "5"}, 5))
+	Traceback (most recent call last):
+		  ...
+	NameError: name 'H' is not defined
