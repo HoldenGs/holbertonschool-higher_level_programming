@@ -1,0 +1,41 @@
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+	>>> print(__import__("3-say_my_name").__doc__)
+	<BLANKLINE>
+	3-say_my_name
+	<BLANKLINE>
+	1 function:
+	say_my_name
+	<BLANKLINE>
+	>>> print(__import__("3-say_my_name").say_my_name.__doc__)
+	<BLANKLINE>
+	    say_my_name: print out first_name and last_name
+	    first_name: string
+	    last_name: string
+        <BLANKLINE>
+            exceptions:
+            TypeError: if either input is not a string
+	<BLANKLINE>
+	>>> say_my_name("Holden", "van Russom")
+	Holden van Russom
+	>>> say_my_name("Holden", "")
+	Holden 
+	>>> say_my_name(12, "Grissett")
+	Traceback (most recent call last):
+		  ...
+	TypeError: first_name must be a string
+	>>> say_my_name("Holden", ["Finicky"])
+	Traceback (most recent call last):
+		  ...
+	TypeError: last_name must be a string
+	>>> say_my_name(None, None)
+	Traceback (most recent call last):
+		  ...
+	TypeError: first_name must be a string
+	>>> say_my_name()
+	Traceback (most recent call last):
+		  ...
+	TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+	>>> say_my_name("Guido", "van", "Russom")
+	Traceback (most recent call last):
+		  ...
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
