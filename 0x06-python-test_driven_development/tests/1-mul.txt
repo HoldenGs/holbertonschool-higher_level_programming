@@ -55,29 +55,24 @@
 	>>> print(mul(2, False))
 	0
 
-For NoneTypes:
+Sets:
 
-    >>> print(mul(3, None))
+    >>> print(mul({1,3,4}, 2))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
+    TypeError: unsupported operand type(s) for *: 'set' and 'int'
 
-    >>> print(mul(True, None))
+    >>> print(mul({1,2,3}, 3.4))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'bool' and 'NoneType'
+    TypeError: unsupported operand type(s) for *: 'set' and 'float'
 
-    >>> print(mul(None, None))
+    >>> print(mul({1,3,4}, True))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
+    TypeError: unsupported operand type(s) for *: 'set' and 'bool'
 
-    >>> print(mul("ha", None))
+    >>> print(mul({1,2,3}, None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'NoneType'
+    TypeError: unsupported operand type(s) for *: 'set' and 'NoneType'
 
-
-    >>> print(mul((1, 2), None))
+    >>> print(mul({1,2,3}, {4, 5, 6}))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'NoneType'
-
-    >>> print(mul([1, 2], None))
-    Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'NoneType'
+    TypeError: unsupported operand type(s) for *: 'set' and 'set'
