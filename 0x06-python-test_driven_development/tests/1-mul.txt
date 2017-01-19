@@ -55,24 +55,25 @@
 	>>> print(mul(2, False))
 	0
 
-Sets:
 
-    >>> print(mul({1,3,4}, 2))
-    Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'set' and 'int'
+For "TypeError: can't multiply sequence by non-int of type" Tracebacks:
 
-    >>> print(mul({1,2,3}, 3.4))
+    >>> print(mul("ooh", "lala"))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'set' and 'float'
+    TypeError: can't multiply sequence by non-int of type 'str'
 
-    >>> print(mul({1,3,4}, True))
+    >>> print(mul((1, 2), (3, 4)))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'set' and 'bool'
+    TypeError: can't multiply sequence by non-int of type 'tuple'
 
-    >>> print(mul({1,2,3}, None))
+    >>> print(mul(4.3, (2, 4)))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'set' and 'NoneType'
+    TypeError: can't multiply sequence by non-int of type 'float'
 
-    >>> print(mul({1,2,3}, {4, 5, 6}))
+    >>> print(mul({1,2,3}, (2, 4)))
     Traceback (most recent call last):
-    TypeError: unsupported operand type(s) for *: 'set' and 'set'
+    TypeError: can't multiply sequence by non-int of type 'set'
+
+    >>> print(mul({1:"Hello", 'Water': "Bottle" , "Fizz" : 3}, (2, 4)))
+    Traceback (most recent call last):
+    TypeError: can't multiply sequence by non-int of type 'dict'
