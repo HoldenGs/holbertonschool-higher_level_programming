@@ -77,7 +77,8 @@
 	.
 	<BLANKLINE>
 
-	>>> text_indentation(hoooo)
-	Traceback (most recent call last):
-		  ...
-	NameError: name 'hoooo' is not defined
+	>>> text_indentation("    :  5.")
+	:
+	<BLANKLINE>
+	5.
+	<BLANKLINE>
