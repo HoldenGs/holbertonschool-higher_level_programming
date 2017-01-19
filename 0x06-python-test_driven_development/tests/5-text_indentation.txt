@@ -71,3 +71,4 @@
 	<BLANKLINE>
 	.
 	<BLANKLINE>
+	>>> text_indentation("")
