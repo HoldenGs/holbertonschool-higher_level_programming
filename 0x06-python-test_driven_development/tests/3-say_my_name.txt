@@ -16,9 +16,9 @@
             TypeError: if either input is not a string
 	<BLANKLINE>
 	>>> say_my_name("Holden", "van Russom")
-	Holden van Russom
+	My name is Holden van Russom
 	>>> say_my_name("Holden", "")
-	Holden 
+	My name is Holden 
 	>>> say_my_name(12, "Grissett")
 	Traceback (most recent call last):
 		  ...
