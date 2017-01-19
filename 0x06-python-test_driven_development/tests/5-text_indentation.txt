@@ -77,9 +77,7 @@
 	.
 	<BLANKLINE>
 
-	>>> text_indentation(":\n.")
-	:
-	<BLANKLINE>
-	<BLANKLINE>
-	.
-	<BLANKLINE>
+	>>> text_indentation(hoooo)
+	Traceback (most recent call last):
+		  ...
+	NameError: name 'hoooo' is not defined
