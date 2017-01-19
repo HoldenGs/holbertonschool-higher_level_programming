@@ -52,7 +52,7 @@
 	6
 	>>> print(mul(5.123452, 8.1444529))
 	41.7277134994108
-	>>> print(mul("good", "great"))
+	>>> print(mul("good", 2.1))
 	Traceback (most recent call last):
 		  ...
-	TypeError: can't multiply sequence by non-int of type 'str'
+	TypeError: can't multiply sequence by non-int of type 'float'
