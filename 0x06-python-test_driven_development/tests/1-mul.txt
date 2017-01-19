@@ -55,24 +55,29 @@
 	>>> print(mul(2, False))
 	0
 
-For "TypeError: can't multiply sequence by non-int of type" Tracebacks:
+For NoneTypes:
 
-    >>> print(mul("ooh", "lala"))
+    >>> print(mul(3, None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'str'
+    TypeError: unsupported operand type(s) for *: 'int' and 'NoneType'
 
-    >>> print(mul((1, 2), (3, 4)))
+    >>> print(mul(True, None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'tuple'
+    TypeError: unsupported operand type(s) for *: 'bool' and 'NoneType'
 
-    >>> print(mul(4.3, (2, 4)))
+    >>> print(mul(None, None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'float'
+    TypeError: unsupported operand type(s) for *: 'NoneType' and 'NoneType'
 
-    >>> print(mul({1,2,3}, (2, 4)))
+    >>> print(mul("ha", None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'set'
+    TypeError: can't multiply sequence by non-int of type 'NoneType'
 
-    >>> print(mul({1:"Hello", 'Water': "Bottle" , "Fizz" : 3}, (2, 4)))
+
+    >>> print(mul((1, 2), None))
     Traceback (most recent call last):
-    TypeError: can't multiply sequence by non-int of type 'dict'
+    TypeError: can't multiply sequence by non-int of type 'NoneType'
+
+    >>> print(mul([1, 2], None))
+    Traceback (most recent call last):
+    TypeError: can't multiply sequence by non-int of type 'NoneType'
