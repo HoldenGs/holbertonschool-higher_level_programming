@@ -77,6 +77,9 @@
 	.
 	<BLANKLINE>
 
-	>>> text_indentation("{:s}".format(":"))
+	>>> text_indentation(":\n.")
 	:
+	<BLANKLINE>
+	<BLANKLINE>
+	.
 	<BLANKLINE>
