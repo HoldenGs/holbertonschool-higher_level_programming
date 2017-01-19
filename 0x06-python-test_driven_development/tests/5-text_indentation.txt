@@ -71,7 +71,7 @@
 	<BLANKLINE>
 	.
 	<BLANKLINE>
-	>>> text_indentation(":yes")
+	>>> text_indentation(": yes")
 	:
 	<BLANKLINE>
 	yes
