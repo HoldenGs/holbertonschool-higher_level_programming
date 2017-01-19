@@ -71,14 +71,7 @@
 	<BLANKLINE>
 	.
 	<BLANKLINE>
-	>>> text_indentation("string." * 5)
-	string.
-	<BLANKLINE>
-	string.
-	<BLANKLINE>
-	string.
-	<BLANKLINE>
-	string.
-	<BLANKLINE>
-	string.
-	<BLANKLINE>
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+		  ...
+	TypeError: text must be a string
