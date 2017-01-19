@@ -23,7 +23,5 @@ def print_square(size):
     try:
         for i in range(size):
             print("#" * size)
-        if size == 0:
-            print()
     except:
         raise
