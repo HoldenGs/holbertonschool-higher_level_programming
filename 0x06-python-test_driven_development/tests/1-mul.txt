@@ -54,3 +54,29 @@
 	41.7277134994108
 	>>> print(mul(2, False))
 	0
+
+Dicts:
+
+    >>> print(mul({1:"hello", 3:"Fizz", "list":[1,2,3]}, 2))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'int'
+
+    >>> print(mul({1:"hello", 3:"Fizz", "list":[1,2,3]}, 2.3))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'float'
+
+    >>> print(mul({1:"hello", 3:"Fizz", "list":[1,2,3]}, True))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'bool'
+
+    >>> print(mul({1:"hello", 3:"Fizz", "list":[1,2,3]}, None))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'NoneType'
+
+    >>> print(mul({1:"hello", 3:"Fizz", "list":[1,2,3]}, {1:"hello", 2:"goodbye"}))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'dict'
+
+    >>> print(mul({1:"hello",2:"goodbye", "Fizz":3}, {4, 5, 6}))
+    Traceback (most recent call last):
+    TypeError: unsupported operand type(s) for *: 'dict' and 'set'
