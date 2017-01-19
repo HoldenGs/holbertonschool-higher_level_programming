@@ -71,4 +71,14 @@
 	<BLANKLINE>
 	.
 	<BLANKLINE>
-	>>> text_indentation("")
+	>>> text_indentation("string." * 5)
+	string.
+	<BLANKLINE>
+	string.
+	<BLANKLINE>
+	string.
+	<BLANKLINE>
+	string.
+	<BLANKLINE>
+	string.
+	<BLANKLINE>
