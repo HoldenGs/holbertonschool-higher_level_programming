@@ -1,5 +1,28 @@
 	>>> Square = __import__('4-square').Square
 
+	>>> print(__import__('4-square').__doc__)
+	<BLANKLINE>
+	4-square
+	<BLANKLINE>
+	1 class:
+	Square
+	<BLANKLINE>
+	>>> print(__import__('4-square').Square.__doc__)
+	<BLANKLINE>
+	    Square: Square class, represents a physical square
+	<BLANKLINE>
+	>>> print(__import__('4-square').Square.__init__.__doc__)
+	<BLANKLINE>
+	        __init__: Square initializer
+	<BLANKLINE>
+	>>> print(__import__('4-square').Square.size.__doc__)
+	<BLANKLINE>
+	        size: private variable getter
+	<BLANKLINE>
+	>>> print(__import__('4-square').Square.area.__doc__)
+	<BLANKLINE>
+	        area: area of instance variable size
+	<BLANKLINE>
 
 	>>> def test_init_bad(tests):
 	...    for test in tests:
