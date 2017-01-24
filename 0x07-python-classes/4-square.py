@@ -5,6 +5,8 @@
 1 class:
 Square
 """
+
+
 class Square:
     """
     Square: Square class, represents a physical square
