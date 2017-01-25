@@ -16,8 +16,8 @@ class Rectangle:
 
     def __str__(self):
         rectangle = ""
-        for i in range(self.__height):
-            rectangle += "{}\n".format("#" * self.__width)
+        rectangle = "\n".join(("#" * self.__width)
+                              for i in range(self.__height))
         return rectangle
 
     @property
