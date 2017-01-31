@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+
+class MyInt(int):
+    def __init__(self, i):
+        self.i = i
+
+    def __eq__(self, other):
+        if self.i != other:
+            return True
+        else:
+            return False
+
+    def __ne__(self, other):
+        if self.i == other:
+            return True
+        else:
+            return False
