@@ -1,0 +1,11 @@
+	>>> MyList = __import__('1-my_list').MyList
+	>>> l1 = MyList()
+	>>> type(l1)
+	<class '1-my_list.MyList'>
+	>>> print(l1)
+	[]
+	>>> my_list = MyList([1, 3, 2])
+	>>> my_list.print_sorted()
+	[1, 2, 3]
+	>>> issubclass(MyList, list)
+	True
