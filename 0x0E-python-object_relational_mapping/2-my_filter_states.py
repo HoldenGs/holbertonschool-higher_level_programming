@@ -8,7 +8,7 @@ if __name__ == "__main__":
     import MySQLdb
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     c = db.cursor()
-    c.execute("""SELECT id, name FROM states WHERE name LIKE '{}' \
+    c.execute("""SELECT id, name FROM states WHERE name REGEXP BINARY '{}' \
     ORDER BY states.id ASC""".format(argv[4]))
     for x in c.fetchall():
         print(x)
