@@ -20,5 +20,6 @@ if __name__ == "__main__":
     state = session.query(State).filter(State.name == 'Louisiana')
     try:
         print(state[0].id)
+        session.commit()
     except IndexError:
         print("Not found")
