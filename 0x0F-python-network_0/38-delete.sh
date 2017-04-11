@@ -1,3 +1,3 @@
 #!/bin/bash
 # Execute curl DELETE request on first argument
-curl -X -s DELETE "$1"
+curl -s -X DELETE "$1"
