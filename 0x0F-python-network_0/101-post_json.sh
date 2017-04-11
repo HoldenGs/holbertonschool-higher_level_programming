@@ -1,3 +1,3 @@
 #!/bin/bash
 # Execute a curl POST request using data from a file in argument #2
-curl -H "Content-Type: application/json" -d @"$2" "$1"
+curl -s -d @"$2" -H "Content-Type: application/json" "$1"
