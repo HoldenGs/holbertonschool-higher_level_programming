@@ -3,5 +3,5 @@
 if __name__ == '__main__':
     from sys import argv
     from urllib import request
-    _, headers = request.urlretrieve(argv[1])
-    print(headers['X-Request-Id'])
+    with request.urlopen(argv[1]) as response:
+        print(response.info()['X-Request-Id'])
