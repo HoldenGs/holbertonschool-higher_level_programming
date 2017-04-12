@@ -5,9 +5,15 @@ if __name__ == '__main__':
     import requests
     url = 'https://swapi.co/api/people/?search={}'.format(argv[1])
     r = requests.get(url).json()
-    while r['next'] is not None:
-        people = '\n'.join([person['name'] for person in r['results']])
-        if r['count'] > 0:
-            people = '\n' + people
-        print('Number of result: {}{}'.format(r['count'], people))
+    people = '\n'.join([person['name'] for person in r['results']])
+    if r['count'] > 0:
+        people = '\n' + people
+    print('Number of result: {}{}'.format(r['count'], people))
+    if r['next'] is not None:
         r = requests.get(r['next']).json()
+        while r['next'] is not None:
+            people = '\n'.join([person['name'] for person in r['results']])
+            if r['count'] > 0:
+                people = '\n' + people
+            print('Number of result: {}{}'.format(r['count'], people))
+            r = requests.get(r['next']).json()
