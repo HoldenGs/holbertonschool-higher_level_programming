@@ -12,6 +12,7 @@ if __name__ == '__main__':
         count += 1
         if count > 10:
             break
-        results += '{}: {}\n'.format(commit['sha'],
-                                     commit['commit']['author']['name'])
+        if isinstance(commit, dict):
+            results += '{}: {}\n'.format(commit['sha'],
+                                         commit['commit']['author']['name'])
     print(results, end="")
