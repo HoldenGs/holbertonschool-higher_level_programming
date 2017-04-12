@@ -10,7 +10,8 @@ if __name__ == '__main__':
     from sys import argv
     import requests
 
-    search_url = 'https://api.twitter.com/1.1/search/tweets.json'
+    search = argv[3].replace('#', '%23').replace('@', '%40')
+    search_url = 'https://api.twitter.com/1.1/search/tweets.json?q=' + search
     auth_url = 'https://api.twitter.com/oauth2/token'
     consumer_key = argv[1]
     consumer_secret = argv[2]
@@ -24,10 +25,9 @@ if __name__ == '__main__':
     data = 'grant_type=client_credentials'
     r = requests.post(auth_url, headers=headers, data=data)
 
-    params = {'q': argv[3]}
     access_token = r.json()['access_token']
     search_header = {'Authorization': 'Bearer {}'.format(access_token)}
-    response = requests.get(search_url, params=params, headers=search_header)
+    response = requests.get(search_url, headers=search_header)
 
     tweets = []
     for tweet in response.json()['statuses']:
