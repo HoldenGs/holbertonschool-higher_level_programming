@@ -13,5 +13,5 @@ if __name__ == '__main__':
         if count > 10:
             break
         results += '{}: {}\n'.format(commit['sha'],
-                                   commit['commit']['author']['name'])
+                                     commit['commit']['author']['name'])
     print(results, end="")
