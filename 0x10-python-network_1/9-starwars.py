@@ -5,6 +5,7 @@ if __name__ == '__main__':
     import requests
     url = 'https://swapi.co/api/people/?search={}'.format(argv[1])
     r = requests.get(url).json()
-    results = r['results']
-    people = '\n'.join(list(person['name'] for person in results))
-    print('Number of result: {}\n{}'.format(r['count'], people))
+    people = '\n'.join(list(person['name'] for person in r['results']))
+    if r['count'] > 0:
+        people = '\n' + people
+    print('Number of result: {}{}'.format(r['count'], people))
