@@ -35,6 +35,6 @@ if __name__ == '__main__':
         count += 1
         if count > 5:
             break
-        tweets.append('[{}] {} by {}'.format(tweet['id'], tweet['text'],
+        tweets.append('[{}] {} by {}'.format(tweet['id_str'], tweet['text'],
                                              tweet['user']['name']))
     print('\n'.join(tweets))
