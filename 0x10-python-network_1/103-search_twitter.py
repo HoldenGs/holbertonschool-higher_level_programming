@@ -10,7 +10,10 @@ if __name__ == '__main__':
     from sys import argv
     import requests
 
-    search_url = 'https://api.twitter.com/1.1/search/tweets.json'
+    hashtag = argv[3]
+    hashtag = hashtag.replace("#", "23")
+    search_url = "https://api.twitter.com/1.1/search/tweets.json?q=%" + hashtag
+#    search_url = 'https://api.twitter.com/1.1/search/tweets.json'
     auth_url = 'https://api.twitter.com/oauth2/token'
     consumer_key = argv[1]
     consumer_secret = argv[2]
