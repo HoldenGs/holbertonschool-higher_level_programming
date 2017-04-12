@@ -33,4 +33,5 @@ if __name__ == '__main__':
     for tweet in response.json()['statuses']:
         tweets.append('[{}] {} by {}'.format(tweet['id_str'], tweet['text'],
                                              tweet['user']['name']))
-    print('\n'.join(tweets))
+    if len(tweets) > 0:
+        print('\n'.join(tweets))
