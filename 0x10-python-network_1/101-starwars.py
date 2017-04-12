@@ -13,7 +13,7 @@ if __name__ == '__main__':
         r = requests.get(r['next']).json()
         while r['next'] is not None:
             people = '\n'.join([person['name'] for person in r['results']])
-            if r['count'] > 0:
-                people = '\n' + people
-            print('Number of result: {}{}'.format(r['count'], people))
+            print(people)
             r = requests.get(r['next']).json()
+        people = '\n'.join([person['name'] for person in r['results']])
+        print(people)
