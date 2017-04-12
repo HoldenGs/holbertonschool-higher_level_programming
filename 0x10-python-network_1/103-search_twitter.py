@@ -22,16 +22,18 @@ if __name__ == '__main__':
         .format(bearer_token_encoded.decode('ascii'))
     }
     data = {'grant_type': 'client_credentials'}
-    r = requests.post(auth_url, headers=headers, data=data)
+    r = requests.post(auth_url, headers=headers, data=data).json()
+    r = dict(r)
 
-    access_token = r.json()['access_token']
+    access_token = r['access_token']
     search_header = {'Authorization': 'Bearer {}'.format(access_token)}
     params = {'q': argv[3]}
     response = requests.get(search_url, params=params, headers=search_header)
+    response = dict(response.json())
 
     tweets = []
     count = 0
-    for tweet in response.json()['statuses']:
+    for tweet in response['statuses']:
         count += 1
         if count > 5:
             break
