@@ -29,8 +29,8 @@ if __name__ == '__main__':
 
     access_token = r.json()['access_token']
     search_header = {'Authorization': 'Bearer {}'.format(access_token)}
-    params = {'q': argv[3]}
-    response = requests.get(search_url, params=params, headers=search_header)
+#    params = {'q': argv[3]}
+    response = requests.get(search_url, headers=search_header)
 
     tweets = []
     count = 0
