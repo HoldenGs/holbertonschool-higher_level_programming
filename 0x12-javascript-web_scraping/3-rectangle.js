@@ -6,7 +6,7 @@ exports.Rectangle = function Rectangle (w, h) {
     this.width = w;
     this.height = h;
   }
-  this.print = function print () {
+  this.print = function () {
     for (let i = 0; i < this.height; i++) {
       let x = '';
       for (let i = 0; i < this.width; i++) {
