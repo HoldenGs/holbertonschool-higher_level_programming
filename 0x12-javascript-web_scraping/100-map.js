@@ -6,7 +6,7 @@ function multiply (value, index) {
   return value * index;
 }
 
-newlist = list.map(multiply);
+const newlist = list.map(multiply);
 
 console.log(list);
 console.log(newlist);
