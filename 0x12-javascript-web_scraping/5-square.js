@@ -24,12 +24,11 @@ function Rectangle (w, h) {
     this.height = this.height * 2;
     this.width = this.width * 2;
   };
-};
+}
 
 function Square (size) {
   Rectangle.call(this, size, size);
 }
 
-Square.prototype = Object.create(Rectangle.prototype);
-Square.prototype.constructor = Square;
+exports.Rectangle = Rectangle;
 exports.Square = Square;
