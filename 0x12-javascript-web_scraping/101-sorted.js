@@ -2,7 +2,7 @@
 
 const dict = require('./101-data.js').dict;
 
-let newdict = {}
+let newdict = {};
 for (const id in dict) {
   if (newdict[dict[id]] === undefined) {
     newdict[dict[id]] = [id];
