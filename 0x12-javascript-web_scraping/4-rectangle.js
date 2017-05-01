@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-exports.Rectangle = function Rectangle (w, h) {
+exports.Rectangle = function (w, h) {
   if (isNaN(parseInt(w)) === false && isNaN(parseInt(h)) === false &&
       w > 0 && h > 0) {
     this.width = w;
@@ -16,7 +16,7 @@ exports.Rectangle = function Rectangle (w, h) {
     }
   };
   this.rotate = function () {
-    h = this.height;
+    let h = this.height;
     this.height = this.width;
     this.width = h;
   };
