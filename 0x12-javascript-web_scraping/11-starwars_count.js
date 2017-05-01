@@ -7,6 +7,9 @@ const options = {
 };
 
 function callback (err, res, body) {
+  if (err) {
+    console.log(err);
+  }
   const json = JSON.parse(body);
   let count = 0;
   for (const film of json.results) {
