@@ -1,3 +1,3 @@
 #!/usr/bin/node
 let el = document.querySelector('header');
-el.style.color = "#FF0000";
+el.style.color = '#FF0000';
